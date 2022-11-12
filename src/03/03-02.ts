@@ -1,4 +1,3 @@
-
 export type GovernmentBuildingsType = {
     type: string
     budget: number
@@ -34,10 +33,15 @@ export const repairHouse = (house: HousesType) => {
 }
 
 
-export const  toFireStaff = (Building: GovernmentBuildingsType, staffToFire: number) => {
+export const toFireStaff = (Building: GovernmentBuildingsType, staffToFire: number) => {
     Building.staffCount -= staffToFire;
 }
 
-export const  toHireStaff = (Building: GovernmentBuildingsType, staffToFire: number) => {
+export const toHireStaff = (Building: GovernmentBuildingsType, staffToFire: number) => {
     Building.staffCount += staffToFire;
+
+}
+
+export const createMessage = (city: StreetType) => {
+    return `Hello ${city.title} citizen. I want you be happy. All ${city.populationOfCity}`
 }
